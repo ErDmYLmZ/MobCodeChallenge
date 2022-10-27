@@ -25,7 +25,7 @@ jobs:
 workflows:
 
     jobs:
-      - build-and-test
+      - say-hello-workflow
 
 
 
