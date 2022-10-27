@@ -16,7 +16,7 @@ import static io.restassured.RestAssured.given;
 @Slf4j
 public class EmailValidationInTheCommentSectionStepDef extends JsonPlaceHolderBaseUrl {
 
-    private Response response;
+   // private Response response;
 
     @When("user fetches the comments")
     public void user_fetches_the_comments() {

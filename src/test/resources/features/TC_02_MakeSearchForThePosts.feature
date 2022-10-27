@@ -1,5 +1,5 @@
 Feature: Make a search for the posts
-@Url
+@SetUrl
   Scenario Outline:  Search for the posts written by the user
     Given user sets the "<endPoint>"
     When user makes a search for the posts written by "<id>"
