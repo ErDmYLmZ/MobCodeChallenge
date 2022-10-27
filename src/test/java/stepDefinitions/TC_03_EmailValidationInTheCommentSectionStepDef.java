@@ -29,6 +29,5 @@ public class TC_03_EmailValidationInTheCommentSectionStepDef extends JsonPlaceHo
        List<String> emails = response.jsonPath().getList("email");
         var falseList= emails.stream().filter(t-> !EmailValidator.getInstance().isValid(t)).peek(System.out::println).collect(Collectors.toList());
        Assert.assertEquals(0, falseList.size());
-
     }
 }
