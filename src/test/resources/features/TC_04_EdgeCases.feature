@@ -1,5 +1,6 @@
 Feature: Various edge cases
   @SetUrl
+  @MobCodeCh
   Scenario Outline: Invalid username
     Given user sets the "<endPoint>"
     When user searches for invalid "<invalidUsername>"
@@ -21,7 +22,7 @@ Feature: Various edge cases
         | cmments         | 9  |
 
   Scenario Outline:  Search for the wrong posts written by the user
-    Given user sets the "<endPoint>"
+    Given user sets the "<endPoint>" with "<id>" query parameters and makes a search
     When user makes a search for the posts written by "<id>"
 #    Then the status code is verified as 200
 #    And the Content type is verified as "application/json; charset=utf-8"

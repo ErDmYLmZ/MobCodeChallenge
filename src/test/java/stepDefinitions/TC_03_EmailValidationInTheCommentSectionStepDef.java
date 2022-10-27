@@ -1,6 +1,6 @@
 package stepDefinitions;
 
-import io.cucumber.cienvironment.internal.com.eclipsesource.json.JsonObject;
+//import io.cucumber.cienvironment.internal.com.eclipsesource.json.JsonObject;
 import io.cucumber.java.en.*;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -14,9 +14,9 @@ import java.util.stream.Collectors;
 
 import static io.restassured.RestAssured.given;
 @Slf4j
-public class EmailValidationInTheCommentSectionStepDef extends JsonPlaceHolderBaseUrl {
+public class TC_03_EmailValidationInTheCommentSectionStepDef extends JsonPlaceHolderBaseUrl {
 
-   // private Response response;
+
 
     @When("user fetches the comments")
     public void user_fetches_the_comments() {

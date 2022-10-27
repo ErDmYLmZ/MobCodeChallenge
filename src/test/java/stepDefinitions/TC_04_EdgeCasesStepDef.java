@@ -5,13 +5,17 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.hamcrest.Matchers;
 import org.junit.Assert;
+import org.junit.matchers.JUnitMatchers;
 import setUp.JsonPlaceHolderBaseUrl;
+
+import java.util.regex.Matcher;
 
 import static io.restassured.RestAssured.*;
 
-public class EdgeCasesStepDef extends JsonPlaceHolderBaseUrl {
-    //private Response response;
+public class TC_04_EdgeCasesStepDef extends JsonPlaceHolderBaseUrl {
+
 
     @When("user searches for invalid {string}")
     public void userSearchesForInvalid(String invalidUsername) {
@@ -41,8 +45,19 @@ public class EdgeCasesStepDef extends JsonPlaceHolderBaseUrl {
         Assert.assertEquals(404, response.getStatusCode());
     }
 
+    @Given("user sets the {string} with {string} query parameters and makes a search")
+    public void userSetsTheWithQueryParameters(String endPoint, String id) {
+        spec.pathParam("first", endPoint).queryParam("id", id);
+        response=given().spec(spec).get("/{first}");
+    }
+
     @Then("user verifies that is wrong {string}")
     public void userVerifiesThatIsWrong(String title) {
-        response.prettyPrint();
+        Assert.assertFalse("Title does not match",response.jsonPath().getList("title").equals(title));
+
     }
+
+
+
+
 }

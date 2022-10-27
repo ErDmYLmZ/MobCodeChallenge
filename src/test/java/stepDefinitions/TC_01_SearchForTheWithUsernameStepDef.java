@@ -5,9 +5,8 @@ import io.restassured.response.Response;
 import org.junit.Assert;
 import setUp.JsonPlaceHolderBaseUrl;
 import static io.restassured.RestAssured.*;
-public class SearchForTheWithUsernameStepDef extends JsonPlaceHolderBaseUrl {
+public class TC_01_SearchForTheWithUsernameStepDef extends JsonPlaceHolderBaseUrl {
 
-    //private Response response;
 
     @Given("user sets the {string}")
     public void userSetsTheWith(String endPoint){

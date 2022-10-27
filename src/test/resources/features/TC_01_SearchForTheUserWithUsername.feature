@@ -1,5 +1,6 @@
 Feature: Search with username
-@SetUrl
+  @SetUrl
+  @MobCodeCh
   Scenario Outline: Search with username Delphine
     Given user sets the "<endPoint>"
     When user searches for a "<username>"
