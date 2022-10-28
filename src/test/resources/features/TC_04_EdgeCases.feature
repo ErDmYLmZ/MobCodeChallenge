@@ -24,8 +24,6 @@ Feature: Various edge cases
   Scenario Outline:  Search for the wrong posts written by the user
     Given user sets the "<endPoint>" with "<id>" query parameters and makes a search
     When user makes a search for the posts written by "<id>"
-#    Then the status code is verified as 200
-#    And the Content type is verified as "application/json; charset=utf-8"
     Then user verifies that is wrong "<title>"
     Examples:
       | endPoint | id | title                                              |

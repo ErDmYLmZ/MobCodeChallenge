@@ -39,6 +39,9 @@ The task is:
 
    ● Be sure that the http://localhost:3000/ up and running
 
+## Test Cases
+   ● To reach the testcases go to "testCases/Mobiquity QA CodingChallenge Test Cases.xlsx"
+
 ## Usage
    ● To run all the tests via TestRunner class, go to "src/test/java/runners/TestRunner.java" and click on the "Run" button.
 
@@ -47,6 +50,16 @@ The task is:
    ● To run all the tests via Maven tab, click on Maven tab then double-click on "verify".
 
    ● To run a single test, go to "src/test/resources/features" file select the regarding feature file and click on the "Run" button.
+
+## Test Reports
+   ● To see the "ExtentPdf" reports go to "testReports/pdfReport/ExtentPdf.pdf" and double-click.
+  
+   ● To see the detailed "Spark" reports go to "testReports/sparkReport/Spark.html" and right click/Open In/Browser/Chrome
+  
+   ● To reach out the test reports via "Circle CI" commit and push to gitlab repository, it will automatically trigger the Circle Ci then go to "https://app.circleci.com/pipelines/github/ErDmYLmZ/MobiquityCodeChallenge", click on success link, click on "built-and-test" link, click on "ARTIFACTS" and click on the "~/test-results/junit/Spark.html" link. 
+
+## Postman Collection
+   ● Postman collection is ready as Json format in the "PostmanCollection" directory. It can be imported to postman.
 
 ### Dependencies
    ● io.rest-assured/rest-assured/5.2.0
@@ -71,7 +84,8 @@ The task is:
    ● net.masterthought/maven-cucumber-reporting/5.0.0
 
 ##Help
-In case of any support/question please contact  "erdemyilmaz4@gmail.com".
+   In case of any support/question please contact  "erdemyilmaz4@gmail.com".
+
 
 
 
