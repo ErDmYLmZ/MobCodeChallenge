@@ -1,7 +1,6 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.*;
-import io.restassured.response.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import setUp.JsonPlaceHolderBaseUrl;
